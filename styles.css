@@ -1,1 +1,70 @@
+/*Cada ítem de lista par de la navegación debería tener color green*/
+nav li:nth-child(even) {
+    color: green;
+}
 
+/*El 3° ítem de lista de la navegación debería tener un color de fondo lightblue*/
+
+nav li:nth-child(3) {
+    background-color: lightblue;
+}
+
+
+
+/*El 1° ítem de lista de la navegación debería tener un borde superior de 1px de ancho, sólido y de color green*/
+nav li:first-child {
+    border-top: 1px solid green;
+}
+
+/*El último ítem de lista de la navegación debería tener un borde inferior de 5px de ancho, sólido y de color blue*/
+nav li:last-child {
+    border-bottom: 5px solid blue;
+}
+
+/*Los links del tercer y quinto ítems de lista de la navegación deberían tener color red*/
+nav li:nth-child(3) a,
+nav li:nth-child(5) a {
+    color: red;
+}
+
+/*El link del quinto ítems de lista de la navegación deberían tener color gray cuando está en hover*/
+nav li:nth-child(5) a:hover {
+    color: gray;
+}
+/*Todo elemento con clase disabled debería tener color gray, a menos que sea un link. En ese caso, debería tener color purple*/
+.disabled:not(a) {
+    color: gray;
+}
+.disabled {
+    color:purple;
+}
+/*Todo elemento con clase active debería tener color gold*/
+.active {
+    color: gold;
+}
+/*Haz el texto "Soy rojo" de color rojo*/
+.padre div:first-child {
+    color: red;
+}
+/*Haz el texto "Soy azul" de color azul*/
+.padre div:nth-child(3) {
+    color: blue;
+}
+/*El hermano directo del texto "Soy rojo" debería tener color de fondo rojo*/
+.padre div:first-child ~ h4:first-of-type {
+    background-color: red;
+}
+/*El hermano directo del texto "Soy azul" debería tener color de fondo azul*/
+.padre div:nth-child(3) ~ h4 {
+    background-color: blue;
+}
+/*Todo h4 que es hijo directo de .abuelo debería tener 1px de borde con bordes redondeados*/
+.abuelo > h4 {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+/*Elementos con clase promo deberían tener color gold y texto en negrita*/
+.promo {
+    color: gold;
+    font-weight: bold;
+}
